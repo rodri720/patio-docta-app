@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import image1 from '../images/ThinkPad-x1-Nano.png';
-import image2 from '../images/Lenovo-yoga-9i.png';
-import image3 from '../images/LenovoE41-25A4.png';
-import image4 from '../images/Ideapad114i.png';
+import especialImage from '../images/especial.png';
+import delacasaImage from '../images/delacasa.png';
+import ruculaImage from '../images/rucula.png';
+import muzzaImage from '../images/muzza.png';
 
 import {
   Box,
@@ -32,24 +32,24 @@ const settings = {
 
 const cards = [
   {
-    title: 'NOTEBOOK LENOVO',
-    text: 'Pantalla 2K de 13″ con imágenes ricas en color, con o sin función táctil',
-    image: image1, // Usa la importación en lugar de require
+    title: 'Pizza Especial',
+    text: 'Salsa muzzarela jamon huevo y aceitunas',
+    image:  especialImage, // Usa la importación en lugar de require
   },
   {
-    title: 'NOTEBOOK LENOVO',
-    text: 'La flexibilidad multimodo de 360 grados se une al entretenimiento móvil de primera calidad',
-    image: image2,
+    title: 'Pizza De La Casa',
+    text: 'Salsa muzzarela cevolla morada beicom huevo y aceitunas negras',
+    image: delacasaImage,
   },
   {
-    title: 'NOTEBOOK LENOVO',
-    text: 'NOTEBOOK LENOVO 14 E41-25-A4-4350B-4GB-500GB',
-    image: image3,
+    title: 'Pizza Rucula',
+    text: 'Salsa muzzarela rucula jamon crudo queso y aceitunas negras',
+    image: ruculaImage,
   },
   {
-    title: 'Notebook Lenovo ',
-    text: 'Notebook Lenovo Ideapad 1i Intel Celeron N4120 4gb 128gb',
-    image: image4,
+    title: 'Pizza Muzzarella',
+    text: 'Salsa muzzarela oregano y aceitunas',
+    image: muzzaImage,
   },
 ];
 

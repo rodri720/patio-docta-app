@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useColorMode, Box, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, Center } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+
 import { useAuth0 } from '@auth0/auth0-react';
 import logo from '../images/logo.png';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';  // Asegúrate de tener esta importación
-import Profile from '../Login/Profile';
+
 
 
 export default function Navbar() {
@@ -27,7 +28,7 @@ export default function Navbar() {
   };
   const handleSearch = () => {
     if (searchText) {
-      navigate(`/home?search=${searchText}`);
+      navigate(`/Menu?search=${searchText}`);
     }
   };
 
@@ -39,7 +40,7 @@ export default function Navbar() {
         <img src={logo} alt="logo" width={'150px'} height={'150px'} />
       </div>
      
-      <h1 className="title"> Lenovo</h1>
+      <h1 className="title">Resto Bar</h1>
       <div className="rightSection">
         <Box>
           <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
@@ -69,11 +70,11 @@ export default function Navbar() {
               </Center>
               <br />
               <Center>
-                <p>PC_MARKET</p>
+                <p>Patio De Docta</p>
               </Center>
               <br />
               <MenuDivider />
-              <MenuItem>pc-market@gmail.com</MenuItem>
+              <MenuItem>patiodedocta@gmail.com</MenuItem>
               <MenuItem></MenuItem>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </MenuList>

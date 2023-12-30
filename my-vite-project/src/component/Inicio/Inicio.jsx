@@ -25,11 +25,11 @@ export default function Inicio() {
         align={'center'}
       >
         <div>
-        <h1 className="title">Bienvenidos a PC_MARKET</h1>
+        <h1 className="title">Bienvenidos a Patio Docta</h1>
         </div>
         <Stack direction={'row'} spacing={6}>
-          <Box as="a" href={'/Home'}>
-            Home
+          <Box as="a" href={'/Menu'}>
+            Menu
           </Box>
           <Box as="a" href={'/About'}>
             About
