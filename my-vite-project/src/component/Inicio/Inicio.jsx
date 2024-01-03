@@ -28,8 +28,8 @@ export default function Inicio() {
         <h1 className="title">Bienvenidos a Patio Docta</h1>
         </div>
         <Stack direction={'row'} spacing={6}>
-          <Box as="a" href={'/Menu'}>
-            Menu
+          <Box as="a" href={'/Carta'}>
+            Carta
           </Box>
           <Box as="a" href={'/About'}>
             About

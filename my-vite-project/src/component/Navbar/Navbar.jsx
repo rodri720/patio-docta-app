@@ -1,31 +1,37 @@
 import React, { useState } from 'react';
-import { useColorMode, Box, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, Center } from '@chakra-ui/react';
+import {
+  useColorMode,
+  Box,
+  Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  Center,
+  Input,
+} from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-
 import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../images/logo.png';
 import './Navbar.css';
-import { useNavigate } from 'react-router-dom';  // Asegúrate de tener esta importación
-
-
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const [searchText, setSearchText] = useState('');
-  const navigate = useNavigate();  // Asegúrate de tener esta declaración
+  const navigate = useNavigate();
 
   const handleToggleColorMode = () => {
     console.log('Toggle color mode clicked');
-    if (colorMode === 'light') {
-      toggleColorMode('dark');
-    } else {
-      toggleColorMode('light');
-    }
+    toggleColorMode();
   };
+
   const handleLogout = () => {
     logout({ returnTo: window.location.origin });
   };
+
   const handleSearch = () => {
     if (searchText) {
       navigate(`/Menu?search=${searchText}`);
@@ -33,18 +39,21 @@ export default function Navbar() {
   };
 
   return (
-    <div className="navbar" style={{ backgroundColor: colorMode === 'light' ? '#FFFFFF' : '#1A202C' }}>
-     
-      
+    <div className="navbar" style={{ backgroundColor: colorMode === 'dark' ? '#1A202C' : '#000000' }}>
       <div className="logo">
         <img src={logo} alt="logo" width={'150px'} height={'150px'} />
       </div>
-     
-      <h1 className="title">Resto Bar</h1>
-      <div className="rightSection">
+      <h1 className="title" style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>Resto Bar</h1>
+      <div className="rightSection" style={{ backgroundColor: colorMode === 'dark' ? '#1A202C' : '#000000' }}>
         <Box>
-          <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          <Button
+            onClick={handleToggleColorMode}
+            rounded={'full'}
+            variant={'link'}
+            cursor={'pointer'}
+            minW={0}
+          >
+            {colorMode === 'dark' ? <SunIcon /> : <MoonIcon color="#ffffff" />}
           </Button>
         </Box>
         {isAuthenticated ? (
@@ -62,7 +71,7 @@ export default function Navbar() {
               {/* Asegúrate de tener el componente Profile disponible y importado */}
               <Profile size="sm" />
             </MenuButton>
-            <MenuList alignItems={'center'} bg={colorMode === 'light' ? 'white' : '#1A202C'}>
+            <MenuList alignItems={'center'} bg={colorMode === 'dark' ? '#1A202C' : '#000000'}>
               <br />
               <Center>
                 {/* Asegúrate de tener el componente Profile disponible y importado */}
@@ -74,9 +83,9 @@ export default function Navbar() {
               </Center>
               <br />
               <MenuDivider />
-              <MenuItem>patiodedocta@gmail.com</MenuItem>
+              <MenuItem style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>patiodedocta@gmail.com</MenuItem>
               <MenuItem></MenuItem>
-              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+              <MenuItem onClick={handleLogout} style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>Logout</MenuItem>
             </MenuList>
           </Menu>
         ) : (
@@ -90,13 +99,13 @@ export default function Navbar() {
             Login
           </Button>
         )}
-        <input
+        <Input
           type="text"
           placeholder="Buscar..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button onClick={handleSearch}>Buscar</button>
+        <Button onClick={handleSearch}>Buscar</Button>
       </div>
     </div>
   );
