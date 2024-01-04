@@ -13,8 +13,8 @@ function Detail() {
 
   return (
     <div className="detail-container">
-      <Link to='/Menu' className="back-link">
-        Volver a Menu
+      <Link to='/Lomoyhambur' className="back-link">
+        Volver a Lomos y Hamburguesas
       </Link>
       <h1 className="detail-title">Detalle del producto</h1>
       <img src={photo.image} alt={`Foto ${id}`} width="400" height="400" />

@@ -1,34 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { photoData } from '../photoData/photoData.js';
+import './Carta.css';
 
 function Carta() {
-  const [loading, setLoading] = useState(true);
-  const [photos, setPhotos] = useState([]);
-
-  useEffect(() => {
-    // Simulamos una solicitud para cargar las fotos (esto podría ser una solicitud HTTP real)
-    setTimeout(() => {
-      setPhotos(photoData);
-      setLoading(false); // Marca la carga como completa
-    }, 1000); // Espera 1 segundo antes de cargar los datos (puedes ajustar esto)
-  }, []);
-
   return (
     <div className="home-container">
       <h1 className="title">Nuestra Carta</h1>
+      
+      {/* Link to Home */}
       <Link to="/">Volver a la página de inicio</Link>
+      
+      {/* Link to view pizzas */}
+      <Link to="/pizzas">VER VARIEDADES DE PIZZAS</Link>
+      
+      {/* Link to view lomitos and hamburguesas */}
+      <Link to="/lomoyhambur">VER VARIEDADES DE LOMITOS Y HAMBURGUESAS</Link>
 
       <div className="spacer"></div>
 
-      {loading ? (
-        <p>Cargando fotos...</p>
-      ) : (
-        <div className="photo-container">
-          <Link to="/pizzas">Ver Variedades de Pizzas</Link>
-          {/* Aquí puedes renderizar las fotos si es necesario */}
-        </div>
-      )}
+      {/* Render the photos or details based on the route */}
+      {/* Use <Route> and <Switch> to render components based on the route */}
+      {/* For example: */}
+      {/* <Route path="/pizzas" component={Pizzas} /> */}
+      {/* <Route path="/lomoyhambur" component={Lomoyhambur} /> */}
+      {/* <Route path="/detail/:id" component={Detail} /> */}
     </div>
   );
 }
