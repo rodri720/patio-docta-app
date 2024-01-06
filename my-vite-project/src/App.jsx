@@ -9,6 +9,7 @@ import Detail from './component/Detail/Detail';
 import Footer from './component/Footer/Footer';
 import About from './component/About/About';
 import Lomoyhambur from './component/Lomoyhambur/Lomoyhambur';
+import Bastonesypicadas from './component/Bastonesypicadas/Bastonesypicadas';
 
 import './App.css';
 
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/carta" element={<Carta />} />
             <Route path="/pizzas" element={<Pizzas />} />
             <Route path="/lomoyhambur" element={<Lomoyhambur />} />
+            <Route path="/bastonesypicadas" element={<Bastonesypicadas />} />
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/footer" element={<Footer />} />
             <Route path="/about" element={<About />} />

@@ -14,7 +14,8 @@ function Carta() {
       <Link to="/pizzas">VER VARIEDADES DE PIZZAS</Link>
       
       {/* Link to view lomitos and hamburguesas */}
-      <Link to="/lomoyhambur">VER VARIEDADES DE LOMITOS Y HAMBURGUESAS</Link>
+      <Link to="/lomoyhambur">VER VARIEDADES DE LOMITOS, HAMBURGUESAS y PANCHOS</Link>
+      <Link to="/Bastonesypicadas">VER VARIEDADES DE BASTONES y PICADAS</Link>
 
       <div className="spacer"></div>
 

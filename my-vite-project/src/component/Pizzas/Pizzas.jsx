@@ -1,3 +1,4 @@
+// Pizzas.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { photoData } from '../photoData/photoData.js';
@@ -33,12 +34,14 @@ function Pizzas() {
         <p>Cargando fotos...</p>
       ) : (
         <div className="photo-container">
-          {/* Renderiza las fotos si están disponibles */}
-          {photos.map((photo) => (
-            <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
-              <img src={photo.image} alt={photo.comment} className="photo" />
-            </Link>
-          ))}
+          {/* Renderiza las fotos de pizzas si están disponibles */}
+          {photos
+            .filter((photo) => photo.category === 'pizzas')
+            .map((photo) => (
+              <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
+                <img src={photo.image} alt={photo.comment} className="photo" />
+              </Link>
+            ))}
         </div>
       )}
     </div>
