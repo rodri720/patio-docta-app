@@ -7,7 +7,7 @@ import './Lomoyhambur.css';
 function Lomoyhambur() {
   return (
     <div className="home-container">
-      <Link to="/carta">Volver a la Carta</Link>
+      <Link to="/carta">VOLVER A LA CARTA</Link>
       <h1 className="title">VARIEDADES EN LOMOS HAMBURGUESAS PANCHOS Y TOSTADO</h1>
       
 

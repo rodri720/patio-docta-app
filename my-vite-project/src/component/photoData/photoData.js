@@ -15,6 +15,17 @@
  import picadacalienteImage from '../images/picadacaliente.png';
  import picadadefiambreImage from '../images/picadadefiambre.png';
  import bastonesdemuzzaImage from '../images/bastonesdemuzza.png';
+ import papachuevoImage from '../images/papachuevo.png';
+ import papasImage from '../images/papas.png';
+ import papasccheddarImage from '../images/papasccheddar.png';
+ import supermilasImage from '../images/supermilas.png';
+ import menuinfantilImage from '../images/menuinfantil.png';
+ import empanadasImage from '../images/empanadas.png';
+ import wrapcarneImage from '../images/wrapcarne.png';
+ import wraptradicionalImage from '../images/wraptradicional.png';
+ import wrapvegetarianoImage from '../images/wrapvegetariano.png';
+ import calzoniespecialImage from '../images/calzoniespecial.png';
+ import calzonidelacasaImage from '../images/calzonidelacasa.png';
  // Import your images here...
 // ...
 
@@ -36,6 +47,18 @@ export const photoData = [
     { id: 14, image: picadacalienteImage, text: 'EMPANADAScriollas y chinas, BASTONES DE MUZZA,milanesitas depollo y ternera , ALBONDIGUITAS,ACEITUNAS Y PAPASfritasCON CHEDDAR Y BACON $9700', category: 'bastonesypicadas' },
     { id: 15, image: picadadefiambreImage, text: 'Jamón Crudo, Bondiola,Salame, Jamón Cocido,, Queso Pategras,Tybo y Roquefort, Aceitunas,Tomatitos Cherry,todo acompañado por una salsita y pan Casero $7800', category: 'bastonesypicadas' },
     { id: 16, image: bastonesdemuzzaImage, text: 'BASTONES DE MUZZARELA CON PORCION DE PAPAS CON CHEDDAR Y BACON $4500', category: 'bastonesypicadas' },
+    { id: 17, image: papachuevoImage, text: 'PAPAS FRITAS CON HUEVO  $2900', category: 'fritas' },
+    { id: 18, image: papasImage, text: 'PAPAS FRITAS TRADICIONALES  $2700', category: 'fritas' },
+    { id: 19, image: papasccheddarImage, text: 'PAPAS FRITAS CON CHEDDAR Y BACON $3000', category: 'fritas' },
+    { id: 20, image: papasImage, text: 'PAPAS FRITAS CON CHEDDAR Y BACON $3000', category: 'fritas' },
+    { id: 21, image: supermilasImage, text: 'NAPOLITANA (JAMON Y MUZZA ),DE lA CASA (CEBOLLA,PANCETA, HUEVO Y MUZZA),CALABRESA (SALAME MILAN Y MUZZA),ROQUEFORT,MUZZA, RÚCULA Y JAMON CRUDO $5100', category: 'fritas' },
+    { id: 22, image: menuinfantilImage, text: 'MILA DE POLLO ACOMPAÑADA CON PAPAS FRITAS $4500', category: 'fritas' },
+    { id: 23, image: empanadasImage, text: 'CRIOLLAS DULCES, CRIOLLAS SALADAS,ARABES,CHINAS y JAMÓN Y QUESO $800', category: 'fritas' },
+    { id: 24, image: wrapcarneImage, text: 'CARNE, JAMÓN, QUESO,LECHUGA,TOMATE Y HUEVO ACOMPAÑADO,DE PAPAS CON CHEDDAR Y VERDEO $4700', category: 'wrap' },
+    { id: 25, image: wraptradicionalImage, text: 'dePOLLO, JAMÓN, QUESO,LECHUGA,TOMATE Y HUEVO ACOMPAÑADO,DEPAPASCON CHEDDAR Y VERDEO $4500', category: 'wrap' },
+    { id: 26, image: wrapvegetarianoImage, text: 'ZANAHORIA,CHOCLO,LECHUGA, HUEVO,TOMATE, QUESO Y ACEITUNAS ACOMPAÑADO,DE PAPAS CON CHEDDAR Y VERDEO $4200', category: 'wrap' },
+    { id: 27, image: calzoniespecialImage, text: 'Jamón, muzarella, morrón, huevo y aceitunas verdes $5600', category: 'wrap' },
+    { id: 28, image: calzonidelacasaImage, text: 'Panceta, huevo,cebolla, muzzarella , acitunas negras $5600', category: 'wrap' },
   ];
   
 

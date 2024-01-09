@@ -5,17 +5,17 @@ import './Carta.css';
 function Carta() {
   return (
     <div className="home-container">
-      <h1 className="title">Nuestra Carta</h1>
+      <h1 className="title">NUESTRA CARTA</h1>
       
       {/* Link to Home */}
-      <Link to="/">Volver a la página de inicio</Link>
+      <Link to="/">VOLVER A LA PAGINA DE INICIO</Link>
       
       {/* Link to view pizzas */}
       <Link to="/pizzas">VER VARIEDADES DE PIZZAS</Link>
-      
-      {/* Link to view lomitos and hamburguesas */}
       <Link to="/lomoyhambur">VER VARIEDADES DE LOMITOS, HAMBURGUESAS y PANCHOS</Link>
       <Link to="/Bastonesypicadas">VER VARIEDADES DE BASTONES y PICADAS</Link>
+      <Link to="/Fritas">VARIEDADES EN PAPAS FRITAS EMPANADAS Y MILANESAS</Link>
+      <Link to="/Wrap">VARIEDADES EN WRAP Y CALZONIS</Link>
 
       <div className="spacer"></div>
 

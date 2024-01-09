@@ -7,8 +7,9 @@ import './Bastonesypicadas.css';
 function Bastonesypicadas() {
   return (
     <div className="home-container">
+       <Link to="/carta">VOLVER A LA CARTA</Link>
       <h1 className="title">Variedades de bastones y picadas</h1>
-      <Link to="/carta">Volver a la Carta</Link>
+      
 
       <div className="spacer"></div>
 
