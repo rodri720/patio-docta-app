@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/logo.png';
 import './Carta.css';
 
 function Carta() {
   return (
     <div className="home-container">
+      <div className="logo">
+        <img src={logo} alt="logo" width={'150px'} height={'150px'} />
+      </div>
       <h1 className="title">NUESTRA CARTA</h1>
       
       {/* Link to Home */}

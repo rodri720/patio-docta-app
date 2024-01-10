@@ -15,6 +15,8 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../images/logo.png';
+
+import Profile from '../Login/Profile';
 import './Navbar.css';
 
 export default function Navbar() {

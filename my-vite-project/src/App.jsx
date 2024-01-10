@@ -12,6 +12,7 @@ import Lomoyhambur from './component/Lomoyhambur/Lomoyhambur';
 import Bastonesypicadas from './component/Bastonesypicadas/Bastonesypicadas';
 import Fritas from './component/Fritas/Fritas';
 import Wrap from './component/Wrap/Wrap';
+import LogoutButton from './component/Login/LogoutButton';
 
 import './App.css';
 
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/footer" element={<Footer />} />
             <Route path="/about" element={<About />} />
+            <Route path="/LogoutButton" element={<LogoutButton />} />
           </Routes>
         </div>
       </Router>
