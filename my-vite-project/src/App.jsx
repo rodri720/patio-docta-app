@@ -33,7 +33,7 @@ export default function App() {
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/footer" element={<Footer />} />
             <Route path="/about" element={<About />} />
-            <Route path="/LogoutButton" element={<LogoutButton />} />
+            <Route path="/loggedout" element={<LogoutButton />} /> 
           </Routes>
         </div>
       </Router>

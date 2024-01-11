@@ -1,15 +1,15 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { useNavigate } from "react-router-dom"; // Utiliza useNavigate en lugar de useHistory
+import { useNavigate } from "react-router-dom";
 
 const LogoutButton = () => {
   const { logout } = useAuth0();
-  const navigate = useNavigate(); // Utiliza useNavigate en lugar de useHistory
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     console.log("Realizando acciones antes de hacer logout...");
-    logout();
-    navigate("/loggedout"); // Utiliza navigate para la redirección
+    logout({ returnTo: window.location.origin });
+    // No es necesario utilizar navigate después de logout ya que Auth0 manejará la redirección
   };
 
   return (

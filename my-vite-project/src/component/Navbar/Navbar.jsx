@@ -15,13 +15,12 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../images/logo.png';
-
+import LogoutButton from '../Login/LogoutButton';
 import Profile from '../Login/Profile';
 import './Navbar.css';
 
-export default function Navbar() {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+const Navbar = () => {
+  const { colorMode, toggleColorMode, isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const [searchText, setSearchText] = useState('');
   const navigate = useNavigate();
 
@@ -59,37 +58,38 @@ export default function Navbar() {
           </Button>
         </Box>
         {isAuthenticated ? (
-          <Menu>
-            <MenuButton
-              as={Button}
-              rounded={'full'}
-              variant={'link'}
-              cursor={'pointer'}
-              minW={0}
-              _hover={{ bg: 'transparent' }}
-              _expanded={{ bg: 'transparent' }}
-              _focus={{ boxShadow: 'none' }}
-            >
-              {/* Asegúrate de tener el componente Profile disponible y importado */}
-              <Profile size="sm" />
-            </MenuButton>
-            <MenuList alignItems={'center'} bg={colorMode === 'dark' ? '#1A202C' : '#000000'}>
-              <br />
-              <Center>
-                {/* Asegúrate de tener el componente Profile disponible y importado */}
-                <Profile size="xl" />
-              </Center>
-              <br />
-              <Center>
-                <p>Patio De Docta</p>
-              </Center>
-              <br />
-              <MenuDivider />
-              <MenuItem style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>patiodedocta@gmail.com</MenuItem>
-              <MenuItem></MenuItem>
-              <MenuItem onClick={handleLogout} style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>Logout</MenuItem>
-            </MenuList>
-          </Menu>
+          <>
+            <LogoutButton />
+            <Menu>
+              <MenuButton
+                as={Button}
+                rounded={'full'}
+                variant={'link'}
+                cursor={'pointer'}
+                minW={0}
+                _hover={{ bg: 'transparent' }}
+                _expanded={{ bg: 'transparent' }}
+                _focus={{ boxShadow: 'none' }}
+              >
+                <Profile size="sm" />
+              </MenuButton>
+              <MenuList alignItems={'center'} bg={colorMode === 'dark' ? '#1A202C' : '#000000'}>
+                <br />
+                <Center>
+                  <Profile size="xl" />
+                </Center>
+                <br />
+                <Center>
+                  <p>Patio De Docta</p>
+                </Center>
+                <br />
+                <MenuDivider />
+                <MenuItem style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>patiodedocta@gmail.com</MenuItem>
+                <MenuItem></MenuItem>
+                <MenuItem onClick={handleLogout}>Logout</MenuItem>
+              </MenuList>
+            </Menu>
+          </>
         ) : (
           <Button
             variant="solid"
@@ -99,6 +99,7 @@ export default function Navbar() {
             onClick={loginWithRedirect}
           >
             Login
+            
           </Button>
         )}
         <Input
@@ -111,4 +112,6 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;

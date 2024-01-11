@@ -1,37 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Menu, MenuButton, Button, Image, MenuList, MenuItem } from "@chakra-ui/react"; // Importa los componentes necesarios de Chakra UI
+import { Box, Button, Center, Image, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { FiLogOut } from "react-icons/fi";
 
-
-
 const Profile = () => {
-  const { isAuthenticated, logout, user } = useAuth0();
+  const { user, isAuthenticated, logout } = useAuth0();
 
-  const handleLogout = () => {
-    console.log("Realizando acciones antes de hacer logout...");
-    logout({ returnTo: window.location.origin });
-  };
+  if (!isAuthenticated) {
+    return null;
+  }
 
   return (
-    isAuthenticated && user && (
-      <div >
-        <Menu>
-          <MenuButton as={Button} variant="flat" colorScheme="gray" size="sm">
-            <Image src={user.picture} alt={`profile_${user.name}`} borderRadius="full" boxSize={8} objectFit="cover" />
-          </MenuButton>
-          <MenuList>
-            <MenuItem as={Link} to="/profile">
-              Perfil
-            </MenuItem>
-            <MenuItem onClick={handleLogout} icon={<FiLogOut />} command="⌘L">
-              Cerrar sesión
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      </div>
-    )
+    <Menu>
+      <MenuButton
+        as={Button}
+        rounded={'full'}
+        variant={'link'}
+        cursor={'pointer'}
+        minW={0}
+        _hover={{ bg: 'transparent' }}
+        _expanded={{ bg: 'transparent' }}
+        _focus={{ boxShadow: 'none' }}
+      >
+        <Box>
+          <Image
+            boxSize="40px"
+            borderRadius="full"
+            src={user.picture}
+            alt={user.name}
+          />
+        </Box>
+      </MenuButton>
+      <MenuList bg="black">
+        <Center>
+          <Image
+            boxSize="80px"
+            borderRadius="full"
+            src={user.picture}
+            alt={user.name}
+          />
+        </Center>
+        <MenuItem>{user.name}</MenuItem>
+        <MenuItem>{user.email}</MenuItem>
+        <MenuItem onClick={() => logout({ returnTo: window.location.origin })}>
+          <FiLogOut style={{ marginRight: '0.5rem' }} />
+          Logout
+        </MenuItem>
+      </MenuList>
+    </Menu>
   );
 };
 
