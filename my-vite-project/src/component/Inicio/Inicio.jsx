@@ -34,6 +34,12 @@ export default function Inicio() {
           <Box as="a" href={'/About'}>
             About
           </Box>
+          <Box as="a" href={'/Horarios'}>
+            Horarios
+          </Box>
+          <Box as="a" href={'/Direccion'}>
+            Direccion
+          </Box>
         </Stack>
       </Container>
 

@@ -19,33 +19,37 @@ import LogoutButton from '../Login/LogoutButton';
 import Profile from '../Login/Profile';
 import './Navbar.css';
 
-const Navbar = () => {
-  const { colorMode, toggleColorMode, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+export default function Navbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const [searchText, setSearchText] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate();  // Asegúrate de tener esta declaración
 
   const handleToggleColorMode = () => {
     console.log('Toggle color mode clicked');
-    toggleColorMode();
+    if (colorMode === 'light') {
+      toggleColorMode('dark');
+    } else {
+      toggleColorMode('light');
+    }
   };
-
   const handleLogout = () => {
     logout({ returnTo: window.location.origin });
   };
-
   const handleSearch = () => {
     if (searchText) {
-      navigate(`/Menu?search=${searchText}`);
+      navigate(`/Carta?search=${searchText}`);
     }
   };
 
+
   return (
-    <div className="navbar" style={{ backgroundColor: colorMode === 'dark' ? '#1A202C' : '#000000' }}>
+    <div className="navbar" style={{ backgroundColor: '#000000', color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>
       <div className="logo">
         <img src={logo} alt="logo" width={'150px'} height={'150px'} />
       </div>
-      <h1 className="title" style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>Resto Bar</h1>
-      <div className="rightSection" style={{ backgroundColor: colorMode === 'dark' ? '#1A202C' : '#000000' }}>
+      <h1 className="title">Resto Bar</h1>
+      <div className="rightSection" style={{ backgroundColor: '#000000' }}>
         <Box>
           <Button
             onClick={handleToggleColorMode}
@@ -99,7 +103,6 @@ const Navbar = () => {
             onClick={loginWithRedirect}
           >
             Login
-            
           </Button>
         )}
         <Input
@@ -114,4 +117,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+

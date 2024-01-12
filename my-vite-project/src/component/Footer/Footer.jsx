@@ -60,7 +60,7 @@ export default function SmallCentered() {
             <SocialButton label={'WhatsApp'} href={'https://wa.me/5491131111111'}>
               <FaWhatsapp />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'https://instagram.com/pcmarket'}>
+            <SocialButton label={'Instagram'} href={'https://www.instagram.com/patiodedocta'}>
               <FaInstagram />
             </SocialButton>
           </Stack>
