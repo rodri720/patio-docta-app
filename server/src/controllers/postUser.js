@@ -1,18 +1,21 @@
-const { User } = require('../models/Users');
+const bcrypt = require('bcrypt');
+const { User } = require('../models/Users.js');
 
 async function postUser(req, res) {
   try {
-    // Obtener los datos del nuevo usuario del cuerpo de la solicitud (req.body)
     const { username, email, password } = req.body;
 
-    // Crear el nuevo usuario en la base de datos
+    // Validaciones de datos (por ejemplo, verificar que los campos no estén vacíos)
+
+    // Hash de la contraseña antes de almacenarla
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     const user = await User.create({
       username,
       email,
-      password,
+      password: hashedPassword,
     });
 
-    // Responder con el usuario recién creado
     return res.status(201).json(user);
   } catch (error) {
     console.error(error);

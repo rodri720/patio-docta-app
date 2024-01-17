@@ -23,5 +23,10 @@ router.post('/logout', (req, res) => {
     req.logOut();
     res.redirect("/"); 
   });
+
+  app.get('/api/users', async (req, res) => {
+    const users = await User.findAll();
+    res.json(users);
+  });
   
 module.exports = router;

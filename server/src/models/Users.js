@@ -1,42 +1,78 @@
 const { DataTypes } = require("sequelize");
+const generateIdUUID = require("../utils/generateIdUUID");
 
-module.exports = (sequelize) => {
-  sequelize.define(
-    "Product",
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      category: {
-        type: DataTypes.STRING,
-      },
-      image: {
-        type: DataTypes.STRING,
-      },
-      resolution: {
-        type: DataTypes.STRING,
-      },
-      memory: {
-        type: DataTypes.STRING,
-      },
-      processor: {
-        type: DataTypes.STRING,
-      },
-    },
-    {
-      // Otros parámetros y configuraciones del modelo si es necesario
-
-      // Especifica el nombre de la base de datos
-      tableName: "products", // Cambia "products" al nombre real de la tabla si es diferente
-
-      // Especifica la base de datos a la que pertenece
-      sequelize,
-    }
-  );
-};
+module.exports = function(database) {
+    database.define('User', {
+        IdUser: {
+            type: DataTypes.TEXT,
+            primaryKey: true,
+            set(value) {
+                //! Clear THIS validation
+                this.setDataValue('IdUser', value ? value : generateIdUUID());
+            }
+        },
+        name: {
+            type: DataTypes.STRING(60),
+            allowNull: false,
+            validate: {
+                notEmpty: true,
+                len: [5, 60]
+            },
+        },
+        email: {
+            type: DataTypes.STRING(50),
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: {
+                    msg: 'The value is not an Email'
+                },
+                len: [5, 50],
+                notNull: {
+                    msg: 'The value cannot be null'
+                },
+                notEmpty: true
+            }
+        },
+        picture: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                //! Validate BEFORE info work flow with cloudinary
+                isUrl: true
+            }
+        },
+        payMethod: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+        },
+        isActive: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
+        },
+        role: {
+            type: DataTypes.STRING(20),
+            allowNull: false,
+            defaultValue: 'user',
+            validate: {
+                isIn: [['user', 'moderator', 'admin', 'superuser']]
+            }
+        },
+        address: {
+            type: DataTypes.STRING(100),
+            allowNull: true,
+        },
+        postalCode: {
+            type: DataTypes.STRING(10),
+            allowNull: true,
+        },
+        province: {
+            type: DataTypes.STRING(50),
+            allowNull: true,
+        },
+        country: {
+            type: DataTypes.STRING(50),
+            allowNull: true,
+        }
+    });
+} 
