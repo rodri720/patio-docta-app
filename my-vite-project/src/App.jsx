@@ -5,7 +5,7 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 
 import Landing from './component/LandingPage/LandingPage';
 import Carta from './component/Carta/Carta';
-import Pizzas from './component/Pizzas/Pizzas'; // Asegúrate de importar Pizzas
+import Pizzas from './component/Pizzas/Pizzas';
 import Detail from './component/Detail/Detail';
 import Footer from './component/Footer/Footer';
 import About from './component/About/About';
@@ -16,6 +16,7 @@ import Wrap from './component/Wrap/Wrap';
 import LogoutButton from './component/Login/LogoutButton';
 import Horarios from './component/Horarios/Horarios';
 import Direccion from './component/Direccion/Direccion';
+import Dashboard from './component/Dashboard/Dashboard';
 
 import './App.css';
 
@@ -38,10 +39,21 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/horarios" element={<Horarios />} />
             <Route path="/direccion" element={<Direccion />} />
-            <Route path="/loggedout" element={<LogoutButton />} /> 
+            <Route path="/loggedout" element={<LogoutButton />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            {/* Ruta no encontrada */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
     </ChakraProvider>
   );
 }
+
+// Agrega un componente NotFound para manejar rutas no encontradas
+const NotFound = () => (
+  <div>
+    <h1>404 - Página no encontrada</h1>
+    <p>Lo siento, la página que buscas no existe.</p>
+  </div>
+);

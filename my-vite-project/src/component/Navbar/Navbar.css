@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: #272626;
     padding: 40px;
     box-shadow: 2px 2px 8px rgba(66, 64, 64, 0.25);
   }
@@ -38,7 +38,7 @@
   }
   
   .rightSection .chakra-menu__menu-list {
-    min-width: 200px;
+    min-width: 150px;
     padding: 10px;
     background-color: #fff;
     border-radius: 4px;

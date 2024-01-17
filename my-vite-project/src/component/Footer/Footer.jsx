@@ -5,7 +5,7 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Logo = (props) => {
   return (
-    <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg height={15} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
       {/* ... Tu código de logo ... */}
     </svg>
   );

@@ -5,15 +5,15 @@ import {
   Button,
   Menu,
   MenuButton,
-  MenuList,
   MenuItem,
+  MenuList,
+  Input,
   MenuDivider,
   Center,
-  Input,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useAuth0 } from '@auth0/auth0-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import LogoutButton from '../Login/LogoutButton';
 import Profile from '../Login/Profile';
@@ -23,25 +23,25 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const [searchText, setSearchText] = useState('');
-  const navigate = useNavigate();  // Asegúrate de tener esta declaración
+  const navigate = useNavigate();
 
   const handleToggleColorMode = () => {
-    console.log('Toggle color mode clicked');
     if (colorMode === 'light') {
       toggleColorMode('dark');
     } else {
       toggleColorMode('light');
     }
   };
+
   const handleLogout = () => {
     logout({ returnTo: window.location.origin });
   };
+
   const handleSearch = () => {
     if (searchText) {
       navigate(`/Carta?search=${searchText}`);
     }
   };
-
 
   return (
     <div className="navbar" style={{ backgroundColor: '#000000', color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>
@@ -71,9 +71,6 @@ export default function Navbar() {
                 variant={'link'}
                 cursor={'pointer'}
                 minW={0}
-                _hover={{ bg: 'transparent' }}
-                _expanded={{ bg: 'transparent' }}
-                _focus={{ boxShadow: 'none' }}
               >
                 <Profile size="sm" />
               </MenuButton>
@@ -93,6 +90,16 @@ export default function Navbar() {
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </MenuList>
             </Menu>
+            <Link to="/dashboard">
+              <Button
+                variant="solid"
+                bg="blue.500"
+                color="white"
+                _hover={{ bg: 'blue.600' }}
+              >
+                Dashboard
+              </Button>
+            </Link>
           </>
         ) : (
           <Button
@@ -116,5 +123,3 @@ export default function Navbar() {
     </div>
   );
 };
-
-

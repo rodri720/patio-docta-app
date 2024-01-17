@@ -32,22 +32,22 @@ const settings = {
 
 const cards = [
   {
-    title: 'Pizza Especial',
+    title: '',
     text: 'Salsa muzzarela jamon huevo y aceitunas',
     image:  especialImage, // Usa la importación en lugar de require
   },
   {
-    title: 'Pizza De La Casa',
+    title: '',
     text: 'Salsa muzzarela cevolla morada beicom huevo y aceitunas negras',
     image: delacasaImage,
   },
   {
-    title: 'Pizza Rucula',
+    title: '',
     text: 'Salsa muzzarela rucula jamon crudo queso y aceitunas negras',
     image: ruculaImage,
   },
   {
-    title: 'Pizza Muzzarella',
+    title: '',
     text: 'Salsa muzzarela oregano y aceitunas',
     image: muzzaImage,
   },
