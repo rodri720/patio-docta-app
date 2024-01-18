@@ -1,0 +1,45 @@
+/* BulkCreateForm.css */
+
+#bulkCreateFormContainer {
+    margin-top: 20px;
+  }
+  
+  #bulkCreateForm {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  #bulkCreateForm h2 {
+    text-align: center;
+  }
+  
+  #bulkCreateForm label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  #bulkCreateForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+  
+  #bulkCreateForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #bulkCreateForm button:hover {
+    background-color: #45a049;
+  }
+  
