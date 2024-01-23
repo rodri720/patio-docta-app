@@ -33,14 +33,47 @@ function Fritas() {
         <p>Cargando fotos...</p>
       ) : (
         <div className="photo-container">
-          {/* Renderiza las fotos de fritas si están disponibles */}
-          {photos
-            .filter((photo) => photo.category === 'fritas')
-            .map((photo) => (
-              <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
-                <img src={photo.image} alt={photo.comment} className="photo" />
-              </Link>
-            ))}
+          {/* Dividir las fotos en cuatro columnas */}
+          <div className="column">
+            {photos
+              .filter((photo) => photo.category === 'fritas')
+              .slice(0, 2) // Primer grupo de dos fotos
+              .map((photo) => (
+                <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
+                  <img src={photo.image} alt={photo.comment} className="photo" />
+                </Link>
+              ))}
+          </div>
+          <div className="column">
+            {photos
+              .filter((photo) => photo.category === 'fritas')
+              .slice(2, 4) // Segundo grupo de dos fotos
+              .map((photo) => (
+                <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
+                  <img src={photo.image} alt={photo.comment} className="photo" />
+                </Link>
+              ))}
+          </div>
+          <div className="column">
+            {photos
+              .filter((photo) => photo.category === 'fritas')
+              .slice(4, 6) // Tercer grupo de dos fotos
+              .map((photo) => (
+                <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
+                  <img src={photo.image} alt={photo.comment} className="photo" />
+                </Link>
+              ))}
+          </div>
+          <div className="column">
+            {photos
+              .filter((photo) => photo.category === 'fritas')
+              .slice(6, 8) // Cuarto grupo de dos fotos
+              .map((photo) => (
+                <Link to={`/detail/${photo.id}`} key={photo.id} className="photo-item">
+                  <img src={photo.image} alt={photo.comment} className="photo" />
+                </Link>
+              ))}
+          </div>
         </div>
       )}
     </div>

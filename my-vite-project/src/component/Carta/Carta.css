@@ -1,14 +1,23 @@
+/* Estilos para enlaces activos y hover */
+.active-link,
+.active-link:hover {
+  color: #ff6600;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* Estilos para el contenedor principal */
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea el contenido a la izquierda */
-  padding: 40px 20px; /* Agrega más espacio arriba y abajo */
+  align-items: flex-start;
+  padding: 40px 20px;
 }
 
 /* Estilos para el logo */
 .logo {
-  margin-bottom: 20px; /* Ajusta el espacio entre el logo y el título según tus necesidades */
+  margin-bottom: 20px;
 }
 
 .logo img {
@@ -20,7 +29,7 @@
 /* Estilos para el título */
 .title {
   font-size: 24px;
-  margin-bottom: 10px; /* Menos espacio entre el título y las imágenes */
+  margin-bottom: 10px;
 }
 
 /* Estilos para el botón */

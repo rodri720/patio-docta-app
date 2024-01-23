@@ -57,7 +57,7 @@ export default function SmallCentered() {
         >
           <Text>Gracias por visitarnos</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'WhatsApp'} href={'https://wa.me/5491131111111'}>
+            <SocialButton label={'WhatsApp'} href={'https://wa.me/5493513665716'}>
               <FaWhatsapp />
             </SocialButton>
             <SocialButton label={'Instagram'} href={'https://www.instagram.com/patiodedocta'}>
