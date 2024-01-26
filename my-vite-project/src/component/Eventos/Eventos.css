@@ -1,0 +1,6 @@
+/* Eventos.css */
+.carousel-image {
+    max-width: 300px;  /* Ajusta el ancho máximo según tus necesidades */
+    height: auto;    /* Permite que la altura se ajuste proporcionalmente al ancho */
+  }
+  

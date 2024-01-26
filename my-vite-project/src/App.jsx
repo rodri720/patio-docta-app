@@ -17,6 +17,8 @@ import LogoutButton from './component/Login/LogoutButton';
 import Horarios from './component/Horarios/Horarios';
 import Direccion from './component/Direccion/Direccion';
 import Dashboard from './component/Dashboard/Dashboard';
+import Eventos from './component/Eventos/Eventos';
+import Reservas from './component/Reservas/Reservas';
 
 import './App.css';
 
@@ -39,6 +41,8 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/horarios" element={<Horarios />} />
             <Route path="/direccion" element={<Direccion />} />
+            <Route path="/eventos" element={<Eventos />} />
+            <Route path="/reservas" element={<Reservas />} />
             <Route path="/loggedout" element={<LogoutButton />} />
             <Route path="/dashboard" element={<Dashboard />} />
             {/* Ruta no encontrada */}

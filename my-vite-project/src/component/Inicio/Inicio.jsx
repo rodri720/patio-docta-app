@@ -40,6 +40,12 @@ export default function Inicio() {
           <Box as="a" href={'/Direccion'}>
             Direccion
           </Box>
+          <Box as="a" href={'/Eventos'}>
+            Eventos
+          </Box>
+          <Box as="a" href={'/Reservas'}>
+            Reservas
+          </Box>
         </Stack>
       </Container>
 

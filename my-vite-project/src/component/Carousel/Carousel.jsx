@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import especialImage from '../images/especial.png';
-import delacasaImage from '../images/delacasa.png';
+import encuentrosImage from '../images/encuentros.png';
+import mojitoImage from '../images/mojito.png';
 import ruculaImage from '../images/rucula.png';
-import muzzaImage from '../images/muzza.png';
+import lomitoImage from '../images/lomito.png';
+import pintaImage from '../images/pinta.png';
 
 import {
   Box,
@@ -33,23 +34,28 @@ const settings = {
 const cards = [
   {
     title: '',
-    text: 'Salsa muzzarela jamon huevo y aceitunas',
-    image:  especialImage, // Usa la importación en lugar de require
+    text: '',
+    image:  encuentrosImage, // Usa la importación en lugar de require
   },
   {
     title: '',
-    text: 'Salsa muzzarela cevolla morada beicom huevo y aceitunas negras',
-    image: delacasaImage,
+    text: '',
+    image: mojitoImage,
   },
   {
     title: '',
-    text: 'Salsa muzzarela rucula jamon crudo queso y aceitunas negras',
+    text: '',
     image: ruculaImage,
   },
   {
     title: '',
-    text: 'Salsa muzzarela oregano y aceitunas',
-    image: muzzaImage,
+    text: '',
+    image: lomitoImage,
+  },
+  {
+    title: '',
+    text: '',
+    image: pintaImage,
   },
 ];
 
@@ -111,7 +117,7 @@ export default function CaptionCarousel() {
                 <img
                   src={card.image}
                   alt={`Card ${index + 1}`} // or provide a meaningful description
-                  style={{ maxWidth: '100%', height: 'auto' }}
+                  style={{ maxWidth: '80%', height: '80%' }}
                 />
 
                 <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>

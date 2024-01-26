@@ -5,14 +5,26 @@ import BulkCreateForm from '../BulkCreateForm/BulkCreateForm';
 import { useForm } from 'react-hook-form';
 import './Dashboard.css';
 
+// ... Importaciones y código anterior ...
+
+// ... Importaciones y código anterior ...
+
+// ... Importaciones y código anterior ...
+
 const Dashboard = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
-  const { register, handleSubmit, setValue, getValues } = useForm(); // Moved inside the component body
+  const { register, handleSubmit, setValue, getValues } = useForm();
+
+  const isAdmin = user && user.email === 'pablolopez@gmail.com';
 
   const handleBulkCreate = (formData) => {
-    console.log('Datos del formulario para bulk create:', formData);
-    // Puedes llamar a la función de bulk create aquí
-    // bulkCreate(formData);
+    if (isAdmin) {
+      console.log('Datos del formulario para bulk create:', formData);
+      // Puedes llamar a la función de bulk create aquí
+      // bulkCreate(formData);
+    } else {
+      alert('Solo el administrador puede crear nuevos productos.');
+    }
   };
 
   const handleImageUpload = (event) => {
@@ -25,7 +37,7 @@ const Dashboard = () => {
       {isAuthenticated ? (
         <Box>
           <Heading>Bienvenido al Dashboard, {user.name}!</Heading>
-          {user['https://your-namespace/roles'] === 'admin' && (
+          {isAdmin && (
             <Box mt={4}>
               <Button colorScheme="red" onClick={() => {/* Acción para borrar productos */}}>
                 Borrar Producto
