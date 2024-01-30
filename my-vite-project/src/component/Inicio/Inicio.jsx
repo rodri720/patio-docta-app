@@ -1,14 +1,5 @@
-
-
-// Importa solo lo necesario desde 'react' y '@chakra-ui/react'
 import React from 'react';
-import { Box, chakra, Container, Stack, Text, useColorModeValue, VisuallyHidden } from '@chakra-ui/react';
-
-
-
-
-
-   
+import { Box, Container, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 
 export default function Inicio() {
   return (
@@ -23,11 +14,10 @@ export default function Inicio() {
         spacing={4}
         justify={'center'}
         align={'center'}
+        className="container"
       >
-        <div>
         <h1 className="title">Bienvenidos a Patio Docta</h1>
-        </div>
-        <Stack direction={'row'} spacing={6}>
+        <Stack direction={'row'} spacing={6} className="links">
           <Box as="a" href={'/Carta'}>
             Carta
           </Box>

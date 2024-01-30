@@ -1,0 +1,27 @@
+/* Estilos para el componente Inicio.jsx */
+.title {
+    font-size: 36px;
+  }
+  
+  /* Media query para dispositivos más pequeños */
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 24px;
+      text-align: center; /* Centra el texto en dispositivos más pequeños */
+      margin-top: 20px; /* Añade un poco de margen superior para separar el título */
+    }
+  
+    .container {
+      padding: 0 20px; /* Ajusta el relleno lateral para dispositivos más pequeños */
+    }
+  
+    .links {
+      flex-direction: column; /* Apila los enlaces verticalmente en dispositivos más pequeños */
+      text-align: center; /* Centra los enlaces en dispositivos más pequeños */
+    }
+  
+    .links a {
+      margin-bottom: 10px; /* Añade espacio entre los enlaces en dispositivos más pequeños */
+    }
+  }
+  
