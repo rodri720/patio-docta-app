@@ -1,29 +1,27 @@
 /* Estilos para el componente Inicio.jsx */
 .title {
-    font-size: 36px;
+  font-size: 36px;
+}
+
+/* Media query para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
   }
-  
-  /* Media query para dispositivos más pequeños */
-  @media screen and (max-width: 768px) {
-    .title {
-      font-size: 24px;
-      text-align: center;
-      margin-top: 20px;
-    }
-  
-    .container {
-      padding: 0 20px;
-    }
-  
-    .links {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .links a {
-      margin-bottom: 10px;
-      width: 100%; /* Hace que los enlaces ocupen el ancho completo */
-      display: block; /* Hace que los enlaces se comporten como bloques y se apilen verticalmente */
-    }
+
+  .container {
+    padding: 0 20px;
   }
-  
+
+  .links {
+    text-align: center;
+  }
+
+  .links a {
+    margin-bottom: 10px;
+    width: 100%; /* Hace que los enlaces ocupen el ancho completo */
+    display: block; /* Hace que los enlaces se comporten como bloques y se apilen verticalmente */
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Asegúrate de importar Link de react-router-dom
 import logo from '../images/logo.png';  // Reemplaza 'ruta/a/tu/logo' con la ruta real de tu logo
-
+import './Reservas.css';  // Reemplaza 'ruta/a/tu/estilos/Reservas.css' con la ruta real de tus estilos
 const Reservas = () => {
   const numeroDeTelefono = '+54 351 509-5337';
   const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroDeTelefono}`;
