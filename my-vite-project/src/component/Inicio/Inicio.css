@@ -7,21 +7,23 @@
   @media screen and (max-width: 768px) {
     .title {
       font-size: 24px;
-      text-align: center; /* Centra el texto en dispositivos más pequeños */
-      margin-top: 20px; /* Añade un poco de margen superior para separar el título */
+      text-align: center;
+      margin-top: 20px;
     }
   
     .container {
-      padding: 0 20px; /* Ajusta el relleno lateral para dispositivos más pequeños */
+      padding: 0 20px;
     }
   
     .links {
-      flex-direction: column; /* Apila los enlaces verticalmente en dispositivos más pequeños */
-      text-align: center; /* Centra los enlaces en dispositivos más pequeños */
+      flex-direction: column;
+      text-align: center;
     }
   
     .links a {
-      margin-bottom: 10px; /* Añade espacio entre los enlaces en dispositivos más pequeños */
+      margin-bottom: 10px;
+      width: 100%; /* Hace que los enlaces ocupen el ancho completo */
+      display: block; /* Hace que los enlaces se comporten como bloques y se apilen verticalmente */
     }
   }
   
