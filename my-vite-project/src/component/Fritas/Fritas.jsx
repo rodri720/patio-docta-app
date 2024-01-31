@@ -8,15 +8,11 @@ function Fritas() {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+    const fetchData = () => {
+      setTimeout(() => {
         setPhotos(photoData);
         setLoading(false);
-      } catch (error) {
-        console.error('Error al cargar las fotos:', error);
-        setLoading(false);
-      }
+      }, 1000);
     };
 
     fetchData();

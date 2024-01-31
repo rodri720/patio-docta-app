@@ -45,8 +45,8 @@ export default function App() {
             <Route path="/reservas" element={<Reservas />} />
             <Route path="/loggedout" element={<LogoutButton />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            {/* Ruta no encontrada */}
-            <Route path="*" element={<NotFound />} />
+            
+           
           </Routes>
         </div>
       </Router>
