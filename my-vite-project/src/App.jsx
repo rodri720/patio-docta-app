@@ -19,6 +19,7 @@ import Direccion from './component/Direccion/Direccion';
 import Dashboard from './component/Dashboard/Dashboard';
 import Eventos from './component/Eventos/Eventos';
 import Reservas from './component/Reservas/Reservas';
+import Inicio from './component/Inicio/Inicio';
 
 import './App.css';
 
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/reservas" element={<Reservas />} />
             <Route path="/loggedout" element={<LogoutButton />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/inicio" element={<Inicio />} />
             
            
           </Routes>
