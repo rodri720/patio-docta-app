@@ -18,13 +18,25 @@ export default function Inicio() {
         className="container"
       >
         <h1 className="title">Bienvenidos a Patio Docta</h1>
-        <Stack direction={{ base: 'column', md: 'row' }} spacing={6} className="links">
-          <a href={'/Carta'}>Carta</a>
-          <a href={'/About'}>About</a>
-          <a href={'/Horarios'}>Horarios</a>
-          <a href={'/Direccion'}>Direccion</a>
-          <a href={'/Eventos'}>Eventos</a>
-          <a href={'/Reservas'}>Reservas</a>
+        <Stack direction={'row'} spacing={6} className="links">
+          <Box as="a" href={'/Carta'}>
+            Carta
+          </Box>
+          <Box as="a" href={'/About'}>
+            About
+          </Box>
+          <Box as="a" href={'/Horarios'}>
+            Horarios
+          </Box>
+          <Box as="a" href={'/Direccion'}>
+            Direccion
+          </Box>
+          <Box as="a" href={'/Eventos'}>
+            Eventos
+          </Box>
+          <Box as="a" href={'/Reservas'}>
+            Reservas
+          </Box>
         </Stack>
       </Container>
 
