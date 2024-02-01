@@ -57,9 +57,5 @@ export default function App() {
 }
 
 // Agrega un componente NotFound para manejar rutas no encontradas
-const NotFound = () => (
-  <div>
-    <h1>404 - Página no encontrada</h1>
-    <p>Lo siento, la página que buscas no existe.</p>
-  </div>
-);
+
+

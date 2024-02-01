@@ -26,6 +26,7 @@
  import wrapvegetarianoImage from '../images/wrapvegetariano.png';
  import calzoniespecialImage from '../images/calzoniespecial.png';
  import calzonidelacasaImage from '../images/calzonidelacasa.png';
+ 
  // Import your images here...
 // ...
 
@@ -59,6 +60,7 @@ export const photoData = [
     { id: 26, image: wrapvegetarianoImage, text: 'ZANAHORIA,CHOCLO,LECHUGA, HUEVO,TOMATE, QUESO Y ACEITUNAS ACOMPAÑADO,DE PAPAS CON CHEDDAR Y VERDEO $4200', category: 'wrap' },
     { id: 27, image: calzoniespecialImage, text: 'Jamón, muzarella, morrón, huevo y aceitunas verdes $5600', category: 'wrap' },
     { id: 28, image: calzonidelacasaImage, text: 'Panceta, huevo,cebolla, muzzarella , acitunas negras $5600', category: 'wrap' },
+
   ];
   
 
