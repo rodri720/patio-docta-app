@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import { ChakraProvider } from '@chakra-ui/react';
 import { Auth0Provider } from '@auth0/auth0-react';
-import { createRoot } from 'react-dom/client';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  
+// Utiliza createRoot para obtener un objeto root con el método hydrate
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-root.render(
+// Enciende el enfoque en el árbol raíz
+root.hydrate(
   <ChakraProvider>
     <React.StrictMode>
       <Auth0Provider
@@ -23,5 +22,4 @@ root.render(
       </Auth0Provider>
     </React.StrictMode>
   </ChakraProvider>
-)
 );
