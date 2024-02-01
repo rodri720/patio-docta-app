@@ -5,7 +5,9 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { createRoot } from 'react-dom/client';
 
-const root = createRoot(document.getElementById('root'));
+ReactDOM.createRoot(document.getElementById('root')).render(
+  
+
 
 root.render(
   <ChakraProvider>
@@ -21,4 +23,5 @@ root.render(
       </Auth0Provider>
     </React.StrictMode>
   </ChakraProvider>
+)
 );
