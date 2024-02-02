@@ -1,14 +1,15 @@
-// vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-// import ReactRefresh from '@vitejs/plugin-react-refresh';
-
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      '/api': 'http://your-backend-server.com',
-    },
-  },
-  // ...otras configuraciones de Vite
-})
+{
+  "builds"; [
+    {
+      "src": "vite.config.js",
+      "use": "@vercel/node",
+      "ignore": [
+        "carpeta-a-excluir/**",
+        "archivo-a-excluir.js"
+      ]
+    }
+  ],
+  "routes"; [
+    // ... tus configuraciones de ruta
+  ]
+}
