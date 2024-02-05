@@ -1,9 +1,8 @@
-/* Estilos para el componente Inicio.jsx */
+/* Inicio.css */
 .title {
   font-size: 36px;
 }
 
-/* Media query para dispositivos más pequeños */
 @media screen and (max-width: 768px) {
   .title {
     font-size: 24px;
@@ -21,7 +20,7 @@
 
   .links a {
     margin-bottom: 10px;
-    width: 100%; /* Hace que los enlaces ocupen el ancho completo */
-    display: block; /* Hace que los enlaces se comporten como bloques y se apilen verticalmente */
+    width: 100%;
+    display: block;
   }
 }

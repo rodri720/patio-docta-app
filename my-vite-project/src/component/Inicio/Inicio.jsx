@@ -1,3 +1,4 @@
+// Inicio.jsx
 import React from 'react';
 import { Box, Container, Stack, useColorModeValue } from '@chakra-ui/react';
 import './Inicio.css';
@@ -11,14 +12,14 @@ export default function Inicio() {
       <Container
         as={Stack}
         maxW={'6xl'}
-        py={4}
-        spacing={4}
+        py={{ base: 4, md: 8 }}
+        spacing={{ base: 4, md: 8 }}
         justify={'center'}
         align={'center'}
         className="container"
       >
         <h1 className="title">Bienvenidos a Patio Docta</h1>
-        <Stack direction={{ base: 'column', md: 'row' }} spacing={6} className="links">
+        <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 6, md: 8 }} className="links">
           <a href={'/Carta'}>Carta</a>
           <a href={'/About'}>About</a>
           <a href={'/Horarios'}>Horarios</a>
