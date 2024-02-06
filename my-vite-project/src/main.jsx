@@ -9,8 +9,8 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
   <ChakraProvider>
     <Auth0Provider
-      domain="dev-pkerk343c7ujo0mk.us.auth0.com"
-      clientId="xNx4iYK5sn9KeZ7mpL5JFoZebUVpEGZX"
+      domain="dev-tqinqrn4chmb6p7m.us.auth0.com"
+      clientId="kgn1yx70gFNi8rrFcLsdrQSGY0xLEIiy"
       authorizationParams={{
         redirect_uri: window.location.origin
       }}
