@@ -20,7 +20,7 @@ export default function Inicio() {
         <h1 className="title">Bienvenidos a Patio Docta</h1>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={6} className="links">
           <a href={'/Carta'}>Carta</a>
-          <a href={'/About'}>About</a>
+          <a href={'/SobreNosotros'}>Sobre Nosotros</a>
           <a href={'/Horarios'}>Horarios</a>
           <a href={'/Direccion'}>Direccion</a>
           <a href={'/Eventos'}>Eventos</a>

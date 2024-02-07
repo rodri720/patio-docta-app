@@ -8,7 +8,7 @@ import Carta from './component/Carta/Carta';
 import Pizzas from './component/Pizzas/Pizzas';
 import Detail from './component/Detail/Detail';
 import Footer from './component/Footer/Footer';
-import About from './component/About/About';
+import SobreNosotros from './component/SobreNosotros/SobreNosotros';
 import Lomoyhambur from './component/Lomoyhambur/Lomoyhambur';
 import Bastonesypicadas from './component/Bastonesypicadas/Bastonesypicadas';
 import Fritas from './component/Fritas/Fritas';
@@ -39,7 +39,7 @@ export default function App() {
             <Route path="/wrap" element={<Wrap />} />
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/footer" element={<Footer />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/sobrenosotros" element={<SobreNosotros />} />
             <Route path="/horarios" element={<Horarios />} />
             <Route path="/direccion" element={<Direccion />} />
             <Route path="/eventos" element={<Eventos />} />

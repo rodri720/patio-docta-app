@@ -1,8 +1,8 @@
 import React from 'react';
-import './About.css';
+import './SobreNosotros.css';
 import { Link } from 'react-router-dom';
 
-const About = () => {
+const SobreNosotros = () => {
   return (
     <div className="about-container">
       <Link to='/'>Volver a la página de inicio</Link>
@@ -49,4 +49,4 @@ const About = () => {
   );
 }
 
-export default About;
+export default SobreNosotros;
