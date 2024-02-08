@@ -87,7 +87,7 @@ export default function Navbar() {
                 <MenuDivider />
                 <MenuItem style={{ color: colorMode === 'dark' ? '#ffffff' : '#1a1a1a' }}>patiodedocta@gmail.com</MenuItem>
                 <MenuItem></MenuItem>
-                <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                <MenuItem onClick={handleLogout}></MenuItem>
               </MenuList>
             </Menu>
             <Link to="/dashboard">
@@ -97,7 +97,7 @@ export default function Navbar() {
                 color="white"
                 _hover={{ bg: 'blue.600' }}
               >
-                Dashboard
+               
               </Button>
             </Link>
           </>
@@ -109,7 +109,7 @@ export default function Navbar() {
             _hover={{ bg: 'blue.600' }}
             onClick={loginWithRedirect}
           >
-            Login
+            
           </Button>
         )}
         <Input
