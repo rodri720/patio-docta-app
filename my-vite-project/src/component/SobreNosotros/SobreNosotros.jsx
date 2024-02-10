@@ -12,7 +12,7 @@ const SobreNosotros = () => {
       <section>
         <h2>BIENVENIDOS A PATIO DE DOCTA</h2>
         <p>
-        En [Nombre del Resto Bar], creemos que la buena comida y el ambiente acogedor son ingredientes esenciales para una experiencia memorable en familia. Somos más que un simple restaurante; somos un lugar donde los amigos se convierten en familia y cada visita se convierte en una ocasión especial.
+        En patio docta, creemos que la buena comida y el ambiente acogedor son ingredientes esenciales para una experiencia memorable en familia. Somos más que un simple restaurante; somos un lugar donde los amigos se convierten en familia y cada visita se convierte en una ocasión especial.
         </p>
       </section>
         <h3>NUESTRA HISTORIA</h3>
@@ -40,7 +40,7 @@ const SobreNosotros = () => {
         <p>
         En PATIO DE DOCTA, nos enorgullece ser parte de la comunidad. Trabajamos con proveedores locales para resaltar los sabores frescos de la región y apoyamos iniciativas comunitarias que fortalecen los lazos entre vecinos.
 
-Únete a nosotros en [Nombre del Resto Bar] para experimentar la fusión perfecta de deliciosa comida, servicio excepcional y un ambiente familiar. Estamos aquí para hacer de cada visita una ocasión especial. ¡Esperamos verte pronto!
+Únete a nosotros en patio de docta para experimentar la fusión perfecta de deliciosa comida, servicio excepcional y un ambiente familiar. Estamos aquí para hacer de cada visita una ocasión especial. ¡Esperamos verte pronto!
         </p>
       </section>
 
